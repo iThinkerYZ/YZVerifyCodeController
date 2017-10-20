@@ -268,6 +268,8 @@
 {
     [self close];
     
+    [_timer invalidate];
+    
     if (_sureOperation) {
         _sureOperation();
     }

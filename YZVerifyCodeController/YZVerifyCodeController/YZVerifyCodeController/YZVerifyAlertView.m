@@ -286,6 +286,12 @@
 {
     [self startTimer];
     
+    // 清空文本框输入
+    _verifyPhoneNumView.text = nil;
+    [UIView animateWithDuration:0.25 animations:^{
+        [self endEditing:YES];
+    }];
+    
     if (_getCodeOperation) {
         _getCodeOperation();
     }

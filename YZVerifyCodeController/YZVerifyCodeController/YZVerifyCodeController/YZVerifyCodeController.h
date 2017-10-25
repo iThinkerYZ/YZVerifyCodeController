@@ -23,8 +23,9 @@
  *  点击确定按钮
  *
  *  @param codeVc 验证码控制器本身
+ *  @param smsCode 输入的短信验证码
  */
-- (void)sureButton:(YZVerifyCodeController *)codeVc;
+- (void)sureButton:(YZVerifyCodeController *)codeVc smsCode:(NSString *)smsCode;
 /**
  *  点击获取验证码
  *

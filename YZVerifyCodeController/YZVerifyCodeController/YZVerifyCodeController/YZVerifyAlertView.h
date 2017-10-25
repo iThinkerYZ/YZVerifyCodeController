@@ -34,7 +34,7 @@
 @property (nonatomic, strong) void(^unGetCodeOperation)(void);
 
 // 点击确认
-@property (nonatomic, strong) void(^sureOperation)(void);
+@property (nonatomic, strong) void(^sureOperation)(NSString *);
 
 // 重新获取验证码
 @property (nonatomic, strong) void(^getCodeOperation)(void);

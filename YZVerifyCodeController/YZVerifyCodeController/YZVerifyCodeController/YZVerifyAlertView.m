@@ -271,7 +271,7 @@
     [_timer invalidate];
     
     if (_sureOperation) {
-        _sureOperation();
+        _sureOperation(_verifyPhoneNumView.text);
     }
 }
 

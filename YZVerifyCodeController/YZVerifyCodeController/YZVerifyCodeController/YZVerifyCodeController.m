@@ -42,10 +42,10 @@
         
         // 事件传递
         __weak typeof(self) weakSelf = self;
-        alertView.sureOperation = ^(){
-            if ([_delegate respondsToSelector:@selector(sureButton:)]) {
+        alertView.sureOperation = ^(NSString *smsCode){
+            if ([_delegate respondsToSelector:@selector(sureButton:smsCode:)]) {
                 
-                [_delegate sureButton:weakSelf];
+                [_delegate sureButton:weakSelf smsCode:smsCode];
             }
         };
         

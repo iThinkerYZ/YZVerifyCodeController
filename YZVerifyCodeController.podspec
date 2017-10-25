@@ -10,13 +10,13 @@ Pod::Spec.new do |s|
 
 
   s.name         = "YZVerifyCodeController"
-  s.version      = "1.2.0"
+  s.version      = "1.3.0"
   s.summary      = "验证框"
   s.homepage     = "https://github.com/iThinkerYZ"
   s.license      = "MIT"
   s.author             = { "iThinkerYZ" => "690423479@qq.com" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/iThinkerYZ/YZVerifyCodeController.git", :tag => "1.2.0" }
+  s.source       = { :git => "https://github.com/iThinkerYZ/YZVerifyCodeController.git", :tag => "1.3.0" }
 
   s.source_files  =  "YZVerifyCodeController/YZVerifyCodeController/YZVerifyCodeController/*.{h,m}"
 

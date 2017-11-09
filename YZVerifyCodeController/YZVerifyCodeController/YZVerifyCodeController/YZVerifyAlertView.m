@@ -10,7 +10,7 @@
 #import "UIColor+YZVerify.h"
 #define Verify_ScreenW [UIScreen mainScreen].bounds.size.width
 #define Verify_ScreenH [UIScreen mainScreen].bounds.size.height
-#define Verify_FontSize [UIFont systemFontOfSize:17]
+#define Verify_FontSize [UIFont systemFontOfSize:16]
 #define Verify_UnGetCoderFontSize [UIFont systemFontOfSize:14]
 #define Verify_AlertFrame CGRectMake(0, 0, 300, 217)
 #define Verify_AlertW 300
@@ -105,13 +105,14 @@
     CGFloat inputW = 195;
     CGFloat inputH = 46;
     UITextField *inputView = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, inputW, inputH)];
-    inputView.layer.borderWidth = 1;
+    inputView.layer.borderWidth = 1.0 / [UIScreen mainScreen].scale;
     inputView.layer.borderColor = [UIColor yz_colorFromString:@"#A8AAB9"].CGColor;
     inputView.layer.cornerRadius = 2.5;
     inputView.keyboardType = UIKeyboardTypeNumberPad;
     inputView.textAlignment = NSTextAlignmentCenter;
     inputView.font = Verify_FontSize;
     inputView.clearButtonMode = UITextFieldViewModeAlways;
+   
     [inputView addTarget:self action:@selector(textChange:) forControlEvents:UIControlEventEditingChanged];
     [verifyView addSubview:inputView];
     _verifyPhoneNumView = inputView;
@@ -195,7 +196,7 @@
         
         NSString *phone3 = [verifyPhoneNum substringWithRange:NSMakeRange(0, 3)];
         NSString *phone4 = [verifyPhoneNum substringWithRange:NSMakeRange(verifyPhoneNum.length - 4, 4)];
-        _verifyPhoneNumView.placeholder = [NSString stringWithFormat:@"已发送至%@****%@",phone3,phone4];
+        _verifyPhoneNumView.placeholder = [NSString stringWithFormat:@" 已发送至%@****%@",phone3,phone4];
     }
 }
 
